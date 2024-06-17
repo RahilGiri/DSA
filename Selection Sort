@@ -1,0 +1,11 @@
+def selection(arr):
+    n = len(arr)
+    for i in range(n-1):  # length=7 so n-1=6
+        minValue = i
+        for j in range(i+1,n):
+            if arr[j] < arr[minValue]:
+                arr[j], arr[minValue] = arr[minValue], arr[j]  # Swap elements if needed
+
+array = [10, 2, 30, 4, 2, 40, 25]
+selection(array)
+print("Sorted array", array)
